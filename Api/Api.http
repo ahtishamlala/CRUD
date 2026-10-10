@@ -1,0 +1,38 @@
+@Api_HostAddress = http://localhost:5055
+
+### 1. Get All Students (GET)
+GET {{Api_HostAddress}}/api/students
+Accept: application/json
+
+### 2. Get Student by ID (GET)
+GET {{Api_HostAddress}}/api/students/1
+Accept: application/json
+
+### 3. Create New Student (POST)
+POST {{Api_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "name": "Zain Malik",
+  "email": "zain.malik@example.com",
+  "department": "Cyber Security",
+  "phone": "+92 321 5556677",
+  "enrollmentDate": "2024-09-01T00:00:00"
+}
+
+### 4. Update Student (PUT)
+PUT {{Api_HostAddress}}/api/students/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Muhammad Ali Khan",
+  "email": "ali.khan@example.com",
+  "department": "Computer Science & AI",
+  "phone": "+92 300 1234567",
+  "enrollmentDate": "2024-01-15T00:00:00"
+}
+
+### 5. Delete Student (DELETE)
+DELETE {{Api_HostAddress}}/api/students/1
+Accept: application/json
